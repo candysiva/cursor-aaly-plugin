@@ -1,0 +1,16 @@
+{
+  "name": "aaly",
+  "displayName": "Aaly",
+  "version": "1.0.0",
+  "description": "Build a full-stack app from Cursor — Aaly is the backend API; your agent builds the frontend.",
+  "author": {
+    "name": "Aaly",
+    "email": "sivag@aaly.io"
+  },
+  "publisher": "Aaly",
+  "homepage": "https://aaly.io",
+  "repository": "https://github.com/candysiva/cursor-aaly-plugin",
+  "license": "MIT",
+  "keywords": ["mcp", "backend", "api", "fullstack", "oauth", "aaly"],
+  "logo": "assets/logo.svg"
+}
