@@ -1,27 +1,45 @@
-# Aaly for Cursor
+# Aaly
 
-Build a full-stack app from Cursor. Aaly is the backend API. Your agent builds the frontend.
+Describe the app you want. You get a real product: your data, a live API, sign-up, and an app people can open, use, and share, built with your coding agent.
 
-You describe the app. Aaly defines the data and serves a live, multi-tenant REST API from that definition. No backend code is generated into your repository. The coding agent builds a small frontend against that API.
+## What you can build
 
-## Install from the Cursor Marketplace
+A helpdesk. A booking system. Billing. Or the product you have in mind.
 
-1. Open **Customize** in the Cursor sidebar.
-2. Search for **Aaly**.
-3. Select **Install**.
-4. Approve the OAuth consent screen in your browser. Sign up at [https://app.aaly.io](https://app.aaly.io) if you do not have an account yet.
+Start with one workflow, or design a complex system from the first conversation. Your agent keeps building on the same product as you ask for more.
 
-No API key is pasted into the plugin. After it is connected, ask Cursor to build an app. The **Build a full-stack app** skill asks for your idea first (helpdesk, booking, or billing if you are stuck), has Aaly create the data and the live API, then builds a small frontend and shows you the API link.
+## Connect
 
-## Fallback: add the MCP server directly
+Aaly is a remote MCP server.
 
-If the marketplace listing is not available yet, point Cursor at the Aaly server. This URL is the whole configuration:
+- **URL:** `https://mcp.aaly.io`
+- **Transport:** Streamable HTTP
+- **Sign-in:** OAuth 2.1 in your browser. No API key for everyday use.
 
+Approve the consent screen when it opens. Create an account there if you need one, at [https://app.aaly.io](https://app.aaly.io).
+
+### VS Code and GitHub Copilot
+
+Create `.vscode/mcp.json` in your project:
+
+```json
+{
+  "servers": {
+    "aaly": {
+      "type": "http",
+      "url": "https://mcp.aaly.io"
+    }
+  }
+}
 ```
-https://mcp.aaly.io
-```
 
-Add it for every project in `~/.cursor/mcp.json`, or for this project only in `.cursor/mcp.json`:
+Start the `aaly` server from Copilot chat and approve the sign-in screen.
+
+### Cursor
+
+Install **Aaly** from the Cursor Marketplace when it is listed: open **Customize**, search for Aaly, and select **Install**.
+
+Or add the server yourself. Use `~/.cursor/mcp.json` for every project, or `.cursor/mcp.json` for this project:
 
 ```json
 {
@@ -33,39 +51,64 @@ Add it for every project in `~/.cursor/mcp.json`, or for this project only in `.
 }
 ```
 
-Then open **Cursor Settings → MCP**, find `aaly`, and click **Login / Connect**.
+Open **Cursor Settings → MCP**, find `aaly`, and choose **Login / Connect**.
 
 One-click install:
 
 [cursor://anysphere.cursor-deeplink/mcp/install?name=aaly&config=eyJ1cmwiOiJodHRwczovL21jcC5hYWx5LmlvIn0=](cursor://anysphere.cursor-deeplink/mcp/install?name=aaly&config=eyJ1cmwiOiJodHRwczovL21jcC5hYWx5LmlvIn0=)
 
-`config` is the base64 encoding of `{"url":"https://mcp.aaly.io"}`.
+### Claude
 
-## OAuth
+Aaly is in the Claude connector directory: [https://claude.ai/directory/aaly](https://claude.ai/directory/aaly).
 
-The server uses OAuth 2.1 with PKCE and dynamic client registration. Cursor requests `https://mcp.aaly.io`, follows the discovery metadata, and opens a consent screen in your browser. You approve it. The token is scoped to that connection and can be revoked from the Aaly dashboard. No key is shown or pasted.
+You can also add a custom connector with the URL `https://mcp.aaly.io`, then approve the sign-in screen.
 
-How the flow works: [Connect an AI agent](https://aaly.io/docs/connect).
+### Other MCP clients
 
-## Test the plugin locally
+Point any client that supports a remote HTTP MCP server at `https://mcp.aaly.io` and complete the browser sign-in.
 
-Copy this repository to:
+### CI and headless use
+
+A Bearer API key from [https://app.aaly.io](https://app.aaly.io) is available only for CI and headless use, where a browser cannot open. Keep that key out of the repository.
+
+## How to use
+
+After you are connected, tell your agent what you want to build. Paste this:
+
+```
+Ask me what I want to build. Use Aaly so I end up with a real product I can open, sign into, and share. Show me the live link. Then ask what to add next.
+```
+
+Your agent will ask for the idea first. If you are stuck, it can start from a helpdesk, booking, or billing product and grow it with you.
+
+## What Aaly gives your agent
+
+Your agent creates a project and the data model for your product, and Aaly serves live API endpoints for that data. It can add custom endpoints and server-side functions, deploy that logic, and read request and function logs when something needs attention. It generates an OpenAPI spec for the project; the server URL in that spec is the live API your product uses. People sign up and use the app through that API.
+
+## Cursor plugin
+
+This repository is also the Aaly plugin for Cursor. Installing it adds:
+
+- The Aaly MCP server at `https://mcp.aaly.io`
+- The `build-fullstack-app` skill, which asks what you want, builds the product with Aaly, shows the live link and how to sign up, says plainly what is not available yet, and asks what to add next
+
+To try the plugin from this repo before a marketplace install, copy it to:
 
 ```
 ~/.cursor/plugins/local/aaly
 ```
 
-The folder must contain `.cursor-plugin/plugin.json`. Restart Cursor, or run **Developer: Reload Window**. Open **Customize** and confirm the Aaly skill and the `aaly` MCP server are listed.
-
-Local plugin imports have to be allowed. On Teams and Enterprise, an admin controls that under **Dashboard → Settings → Security & Identity → Marketplace and Plugins**. If a marketplace plugin named `aaly` is already installed, that install takes precedence over this local copy.
+The folder needs `.cursor-plugin/plugin.json`. Restart Cursor, or run **Developer: Reload Window**, then open **Customize** and confirm the Aaly skill and the `aaly` server are listed. Local plugin imports must be allowed. If a marketplace plugin named `aaly` is already installed, that install takes precedence.
 
 ## Links
 
-- Sign up and dashboard: [https://app.aaly.io](https://app.aaly.io)
-- Connect an agent: [https://aaly.io/docs/connect](https://aaly.io/docs/connect)
-- Privacy: [https://aaly.io/privacy](https://aaly.io/privacy)
-- Aaly: [https://aaly.io](https://aaly.io)
-- MCP server: [https://mcp.aaly.io](https://mcp.aaly.io)
+- [https://aaly.io](https://aaly.io)
+- [Connect an AI agent](https://aaly.io/docs/connect)
+- [Agent connection instructions](https://aaly.io/connect.md)
+- [Limits](https://aaly.io/docs/limits)
+- [Privacy](https://aaly.io/privacy)
+- [App](https://app.aaly.io)
+- MCP Registry name: `io.aaly/aaly`
 
 ## License
 
