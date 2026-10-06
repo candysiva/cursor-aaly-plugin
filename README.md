@@ -37,9 +37,7 @@ Start the `aaly` server from Copilot chat and approve the sign-in screen.
 
 ### Cursor
 
-Install **Aaly** from the Cursor Marketplace when it is listed: open **Customize**, search for Aaly, and select **Install**.
-
-Or add the server yourself. Use `~/.cursor/mcp.json` for every project, or `.cursor/mcp.json` for this project:
+Use `~/.cursor/mcp.json` for every project, or `.cursor/mcp.json` for this project:
 
 ```json
 {
@@ -53,9 +51,7 @@ Or add the server yourself. Use `~/.cursor/mcp.json` for every project, or `.cur
 
 Open **Cursor Settings → MCP**, find `aaly`, and choose **Login / Connect**.
 
-One-click install:
-
-[cursor://anysphere.cursor-deeplink/mcp/install?name=aaly&config=eyJ1cmwiOiJodHRwczovL21jcC5hYWx5LmlvIn0=](cursor://anysphere.cursor-deeplink/mcp/install?name=aaly&config=eyJ1cmwiOiJodHRwczovL21jcC5hYWx5LmlvIn0=)
+[Add Aaly to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=aaly&config=eyJ1cmwiOiJodHRwczovL21jcC5hYWx5LmlvIn0=)
 
 ### Claude
 
@@ -92,13 +88,13 @@ This repository is also the Aaly plugin for Cursor. Installing it adds:
 - The Aaly MCP server at `https://mcp.aaly.io`
 - The `build-fullstack-app` skill, which asks what you want, builds the product with Aaly, shows the live link and how to sign up, says plainly what is not available yet, and asks what to add next
 
-To try the plugin from this repo before a marketplace install, copy it to:
+To install the plugin from this repo, copy it to:
 
 ```
 ~/.cursor/plugins/local/aaly
 ```
 
-The folder needs `.cursor-plugin/plugin.json`. Restart Cursor, or run **Developer: Reload Window**, then open **Customize** and confirm the Aaly skill and the `aaly` server are listed. Local plugin imports must be allowed. If a marketplace plugin named `aaly` is already installed, that install takes precedence.
+The folder needs `.cursor-plugin/plugin.json`. Restart Cursor, or run **Developer: Reload Window**, then open **Customize** and confirm the Aaly skill and the `aaly` server are listed. Local plugin imports must be allowed.
 
 ## Links
 
