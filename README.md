@@ -1,16 +1,14 @@
-# Aaly
+# AALY
 
-Describe the app you want. You get a real product: your data, a live API, sign-up, and an app people can open, use, and share, built with your coding agent.
+Build and host full-stack apps with your coding agent, no AI credits. Your idea + your coding agent + AALY = a live app.
 
-## What you can build
+Connect Cursor, Claude or VS Code with Copilot to `https://mcp.aaly.io`. Your agent defines the backend instead of coding it (database, REST API, sign-in, files, notifications, Python Functions), writes the frontend, and publishes it to `https://<name>.aaly.cloud`. It follows a guided build: questions first, a plan you approve, every business rule tested with sample data, and a user guide at handover.
 
-A helpdesk. A booking system. Billing. Or the product you have in mind.
-
-Start with one workflow, or design a complex system from the first conversation. Your agent keeps building on the same product as you ask for more.
+Start with a helpdesk, a booking system or a client portal, and keep evolving the same app without breaking what already works.
 
 ## Connect
 
-Aaly is a remote MCP server.
+AALY is a remote MCP server.
 
 - **URL:** `https://mcp.aaly.io`
 - **Transport:** Streamable HTTP
@@ -51,13 +49,11 @@ Use `~/.cursor/mcp.json` for every project, or `.cursor/mcp.json` for this proje
 
 Open **Cursor Settings → MCP**, find `aaly`, and choose **Login / Connect**.
 
-[Add Aaly to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=aaly&config=eyJ1cmwiOiJodHRwczovL21jcC5hYWx5LmlvIn0=)
+[Add AALY to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=aaly&config=eyJ1cmwiOiJodHRwczovL21jcC5hYWx5LmlvIn0=)
 
 ### Claude
 
-Aaly is in the Claude connector directory: [https://claude.ai/directory/aaly](https://claude.ai/directory/aaly).
-
-You can also add a custom connector with the URL `https://mcp.aaly.io`, then approve the sign-in screen.
+In Claude, search for AALY under Settings → Connectors, or add a custom connector with the URL `https://mcp.aaly.io`, then approve the sign-in screen.
 
 ### Other MCP clients
 
@@ -72,21 +68,21 @@ A Bearer API key from [https://app.aaly.io](https://app.aaly.io) is available on
 After you are connected, tell your agent what you want to build. Paste this:
 
 ```
-Ask me what I want to build. Use Aaly so I end up with a real product I can open, sign into, and share. Show me the live link. Then ask what to add next.
+Ask me what I want to build. Use AALY so I end up with a real product I can open, sign into, and share. Show me the live link. Then ask what to add next.
 ```
 
 Your agent will ask for the idea first. If you are stuck, it can start from a helpdesk, booking, or billing product and grow it with you.
 
-## What Aaly gives your agent
+## What AALY gives your agent
 
-Your agent creates a project and the data model for your product, and Aaly serves live API endpoints for that data. It can add custom endpoints and server-side functions, deploy that logic, and read request and function logs when something needs attention. It generates an OpenAPI spec for the project; the server URL in that spec is the live API your product uses. People sign up and use the app through that API.
+Your agent creates a project and the data model for your product, and AALY serves live API endpoints for that data. It can add custom endpoints and server-side functions, deploy that logic, and read request and function logs when something needs attention. It generates an OpenAPI spec for the project; the server URL in that spec is the live API your product uses. People sign up and use the app through that API.
 
 ## Cursor plugin
 
-This repository is also the Aaly plugin for Cursor. Installing it adds:
+This repository is also the AALY plugin for Cursor. Installing it adds:
 
-- The Aaly MCP server at `https://mcp.aaly.io`
-- The `build-fullstack-app` skill, which asks what you want, builds the product with Aaly, shows the live link and how to sign up, says plainly what is not available yet, and asks what to add next
+- The AALY MCP server at `https://mcp.aaly.io`
+- The `build-fullstack-app` skill, which asks what you want, builds the product with AALY, shows the live link and how to sign up, says plainly what is not available yet, and asks what to add next
 
 To install the plugin from this repo, copy it to:
 
@@ -94,13 +90,14 @@ To install the plugin from this repo, copy it to:
 ~/.cursor/plugins/local/aaly
 ```
 
-The folder needs `.cursor-plugin/plugin.json`. Restart Cursor, or run **Developer: Reload Window**, then open **Customize** and confirm the Aaly skill and the `aaly` server are listed. Local plugin imports must be allowed.
+The folder needs `.cursor-plugin/plugin.json`. Restart Cursor, or run **Developer: Reload Window**, then open **Customize** and confirm the AALY skill and the `aaly` server are listed. Local plugin imports must be allowed.
 
 ## Links
 
 - [https://aaly.io](https://aaly.io)
 - [Connect an AI agent](https://aaly.io/docs/connect)
-- [Agent connection instructions](https://aaly.io/connect.md)
+- [Agent setup](https://aaly.io/connect.md)
+- [Frontend hosting](https://aaly.io/docs/hosting)
 - [Limits](https://aaly.io/docs/limits)
 - [Privacy](https://aaly.io/privacy)
 - [App](https://app.aaly.io)
@@ -108,4 +105,4 @@ The folder needs `.cursor-plugin/plugin.json`. Restart Cursor, or run **Develope
 
 ## License
 
-MIT. Copyright Aaly / Sivakumar Ganesan.
+MIT. Copyright AALY.
