@@ -1,0 +1,21 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "aaly",
+  "displayName": "AALY",
+  "version": "1.0.4",
+  "description": "Build and host full-stack apps with your coding agent: backend, sign-in and hosting, with no AI credits.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Using AALY, build me a simple helpdesk with tickets, status and priority",
+    "Using AALY, plan a booking app for my studio and show me the plan first",
+    "Using AALY, continue my existing app"
+  ],
+  "author": {
+    "name": "AALY",
+    "url": "https://aaly.io"
+  },
+  "homepage": "https://aaly.io/docs",
+  "repository": "https://github.com/candysiva/cursor-aaly-plugin",
+  "license": "MIT",
+  "keywords": ["full-stack", "hosting", "backend", "app builder", "mcp"]
+}

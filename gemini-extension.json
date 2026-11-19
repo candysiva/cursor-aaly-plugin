@@ -1,0 +1,10 @@
+{
+  "name": "aaly",
+  "version": "1.0.4",
+  "description": "Build and host full-stack apps with your coding agent. Backend, sign-in, hosting. No AI credits.",
+  "mcpServers": {
+    "aaly": {
+      "httpUrl": "https://mcp.aaly.io"
+    }
+  }
+}

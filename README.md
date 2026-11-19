@@ -92,6 +92,31 @@ To install the plugin from this repo, copy it to:
 
 The folder needs `.cursor-plugin/plugin.json`. Restart Cursor, or run **Developer: Reload Window**, then open **Customize** and confirm the AALY skill and the `aaly` server are listed. Local plugin imports must be allowed.
 
+## Other agents
+
+### Gemini CLI
+
+`gemini extensions install` runs in a terminal, outside the Gemini CLI session. After it finishes, start Gemini CLI and run `/mcp auth aaly`.
+
+```bash
+gemini extensions install https://github.com/candysiva/cursor-aaly-plugin
+```
+
+### Antigravity
+
+```bash
+agy plugin install https://github.com/candysiva/cursor-aaly-plugin
+```
+
+### Devin Desktop
+
+Devin Desktop's local agent uses the Devin CLI. This adds `https://mcp.aaly.io` for every project on this computer, then opens the browser sign-in:
+
+```bash
+devin mcp add -s user aaly https://mcp.aaly.io
+devin mcp login aaly
+```
+
 ## Links
 
 - [https://aaly.io](https://aaly.io)

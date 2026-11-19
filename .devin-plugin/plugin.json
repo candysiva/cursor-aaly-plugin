@@ -1,0 +1,14 @@
+{
+  "name": "aaly",
+  "displayName": "AALY",
+  "description": "Build and host full-stack apps with your coding agent, with backend, sign-in and hosting and no AI credits",
+  "homepage": "https://aaly.io",
+  "repository": "https://github.com/candysiva/cursor-aaly-plugin",
+  "keywords": ["full-stack", "hosting", "backend", "app builder"],
+  "logo": "assets/logo.svg",
+  "mcpServers": {
+    "aaly": {
+      "url": "https://mcp.aaly.io"
+    }
+  }
+}
